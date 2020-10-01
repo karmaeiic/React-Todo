@@ -21,8 +21,10 @@ class TodoForm extends React.Component{
     render(){
         return(
             <div>
+            <div className="container has-text-centered box" style={{ maxWidth: '500px' }}>
                 <form onSubmit = {this.OnSubmitHandler}>
                     <input
+                        className="input is-rounded is-large"
                         id = "addTodo"
                         name = "addTodo"
                         type = "text"
@@ -30,9 +32,9 @@ class TodoForm extends React.Component{
                         value = {this.state.itemText}
                         onChange = {this.OnChangeHandler}
                     />
-                    <div><button>Add todo</button></div>
+                    <div><button className="button is-medium is-primary is-fullwidth">Add todo</button></div>
                 </form>
-                <div><button>Clear todo</button></div>
+                <div><button className="button is-medium is-danger is-fullwidth" onClick = {this.props.deleteItem}>Clear todo</button></div></div>
             </div>
         )
     }
